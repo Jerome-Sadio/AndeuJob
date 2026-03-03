@@ -1,24 +1,22 @@
 package ugb.ipsl.info.AndeuDiangue.entity;
 
+
+import lombok.*;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Getter
+@Setter
+@ToString
+
 public class Document {
-    String DriverLink;
 
-    public Document(String driverLink) {
-        DriverLink = driverLink;
-    }
+    private int id;
+    private String title;
+    private String DriverLink;
 
-    public String getDriverLink() {
-        return DriverLink;
-    }
-
-    public void setDriverLink(String driverLink) {
-        DriverLink = driverLink;
-    }
-
-    @Override
-    public String toString() {
-        return "Document{" +
-                "DriverLink='" + DriverLink + '\'' +
-                '}';
+    public Document(String title, String driverLink) {
+        this.title = title;
+        this.DriverLink = driverLink;
     }
 }
